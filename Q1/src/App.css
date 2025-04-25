@@ -1,0 +1,214 @@
+:root {
+  /* --text: ghostwhite; */
+  --text: black;
+
+  --color-0: #AFD75C;
+  --color-1: rgb(2, 175, 197);
+  --color-3: #000E0F;
+}
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-3);
+  background-image: url('assets/Rick_And_Morty_\(1\).svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  color: var(--text);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+nav {
+  /* background-color: var(--color-0); */
+  background-color: var(--color-3);
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  border-bottom: 2px solid #AFD75C;
+  margin-bottom: 30px;
+}
+
+nav>img {
+  height: 32px;
+  cursor: pointer;
+}
+
+nav>* {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  background-color: var(--color-3);
+  font-family: inherit;
+  font-weight: bold;
+  border: 2px solid var(--color-0);
+  border-radius: 8px;
+  color: var(--color-1);
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-0);
+  color: var(--color-3);
+  border: 2px solid var(--color-1);
+  text-decoration-thickness: 2px;
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-1);
+}
+
+footer {
+  margin-top: 30px;
+  background-color: var(--color-0);
+  padding: 10px;
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageControlContainer {
+  background-color: var(--color-0);
+  border-radius: 8px;
+  /* padding: 2px; */
+  width: fit-content;
+  /* color: var(--color-0); */
+  /* color: var(--color-1); */
+  color: var(--color-3);
+  display: flex;
+  gap: 10px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardDIV {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* width: fit-content; */
+  /* margin: auto; */
+}
+
+.card {
+  background-color: var(--color-0);
+  display: flex;
+
+  width: 600px;
+  height: 220px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card>img {
+  width: 220px;
+  border-radius: 8px 0px 0 8px;
+}
+
+.card-data {
+  padding: 10px;
+}
+
+.card-data>* {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.grey {
+  color: dimgrey;
+  font-style: italic;
+}
+
+.character-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.character-card {
+  background-color: var(--color-0);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 1820px;
+}
+
+/* .character-card>img {
+  height: 220px;
+  width: 220px;
+} */
+
+.character-card>* {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* padding: 10px; */
+}
+
+.episode {
+  border: 2px solid var(--color-1);
+  background-color: var(--color-3);
+  color: var(--color-0);
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration-thickness: 2px;
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-1);
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    top: -95px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav>div {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 90%;
+    height: max-content;
+  }
+
+  .card>img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+  }
+}
