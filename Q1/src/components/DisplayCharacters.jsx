@@ -13,7 +13,7 @@ function DisplayCharacters() {
     return (
         <div className="cardDIV">
             {characters.map((character) => {
-                return <Card data={character} />
+                return <Card key={character.id} data={character} />
             })}
         </div>
     )
